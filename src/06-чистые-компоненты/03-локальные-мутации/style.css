@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 20px;
+}
+
+.title {
+    color: white;
+    font-size: 42px;
+    margin: 0 0 16px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin: 0 0 50px 0;
+    line-height: 1.6;
+}
+
+.gathering {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+.gathering h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin: 0 0 30px 0;
+}
+
+.cups-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.cup {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffe5b4 100%);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #856404;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+

@@ -1,0 +1,79 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    padding: 20px;
+}
+
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    min-width: 500px;
+}
+
+.title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    border-color: #fa709a;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease;
+}
+
+.card-item {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.card-item:last-child {
+    margin-bottom: 0;
+}
+
+.card-item strong {
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+

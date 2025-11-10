@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 20px;
+}
+
+.title {
+    color: white;
+    font-size: 42px;
+    margin: 0 0 40px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.messages-box {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.empty-state {
+    font-size: 24px;
+    color: #999;
+    text-align: center;
+    margin: auto;
+}
+
+.message {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.message:last-child {
+    margin-bottom: 0;
+}
+
+.message-from {
+    font-size: 14px;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 8px;
+}
+
+.message-text {
+    font-size: 16px;
+    color: #333;
+}
+
+

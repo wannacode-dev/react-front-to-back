@@ -1,0 +1,50 @@
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.navigation {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    font-size: 18px;
+    font-weight: 600;
+    color: #667eea;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #764ba2;
+}
+
+.page {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 60px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.page h2 {
+    font-size: 36px;
+    color: #333;
+    margin: 0 0 20px 0;
+}
+
+.page p {
+    font-size: 20px;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+

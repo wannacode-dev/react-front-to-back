@@ -1,0 +1,51 @@
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 42px;
+    color: white;
+    margin: 0 0 50px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tasks-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.task:hover {
+    transform: translateX(4px);
+}
+
+.task-title {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 12px 0;
+}
+
+.completed-mark {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.task-priority {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+

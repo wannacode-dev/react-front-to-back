@@ -1,0 +1,46 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    padding: 20px;
+}
+
+.list-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    min-width: 400px;
+}
+
+.title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.fruit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fruit-item {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: transform 0.2s;
+}
+
+.fruit-item:hover {
+    transform: translateX(5px);
+}
+
+

@@ -1,0 +1,51 @@
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header, .main, .footer {
+    padding: 40px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.header {
+    background: #667eea;
+    color: white;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.footer {
+    background: #764ba2;
+    color: white;
+}
+
+.header.dark, .footer.dark {
+    background: #1a1a1a;
+}
+
+.main.dark {
+    background: #2a2a2a;
+    color: white;
+}
+
+.header.light, .footer.light {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.main.light {
+    background: white;
+    color: #333;
+}
+
+

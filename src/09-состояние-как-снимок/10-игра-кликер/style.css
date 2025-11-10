@@ -1,0 +1,99 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.game-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-width: 500px;
+}
+
+.title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 48px;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 30px;
+}
+
+.click-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.1s;
+    margin-bottom: 30px;
+}
+
+.click-btn:hover {
+    transform: scale(1.05);
+}
+
+.click-btn:active {
+    transform: scale(0.95);
+}
+
+.upgrades {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upgrade {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upgrade-name {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+.upgrade-btn {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.3s;
+}
+
+.upgrade-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.upgrade-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.upgrade-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+

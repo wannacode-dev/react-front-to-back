@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 20px;
+}
+
+.user-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+}
+
+.avatar {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 28px;
+    color: #333;
+    margin: 0 0 12px 0;
+    font-weight: bold;
+}
+
+.role {
+    font-size: 18px;
+    color: #667eea;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+}
+
+.location {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+

@@ -1,0 +1,35 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 48px;
+    color: #333;
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #666;
+    margin: 0 0 40px 0;
+}
+
+.article-title {
+    font-size: 32px;
+    color: #667eea;
+    margin: 0 0 20px 0;
+}
+
+.article-text {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin: 0 0 16px 0;
+}
+
+
