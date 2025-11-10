@@ -31,7 +31,9 @@ function buildScriptName(relativeFile) {
   
   // Извлекаем номер из первой папки (например, "13" из "13-передача-данных-с-context")
   const dirParts = toPosix(relDir).split('/').filter(Boolean);
-  const firstDirMatch = dirParts[0]?.match(/^(\d{2,})-/);
+  // Игнорируем "." если файл в корне src
+  const validDirParts = dirParts.filter(p => p !== '.');
+  const firstDirMatch = validDirParts[0]?.match(/^(\d{2,})-/);
   const folderNum = firstDirMatch ? firstDirMatch[1] : null;
   
   // Извлекаем номер из имени файла (например, "06" из "06-глобальное-состояние.решение.jsx")
@@ -43,16 +45,26 @@ function buildScriptName(relativeFile) {
   const isProblem = base.includes('.проблема.');
   
   // Формируем имя скрипта
-  if (folderNum && fileNum) {
-    if (isProblem) {
-      return `task:${folderNum}-${fileNum}`;
-    } else if (isSolution) {
-      return `solution-${folderNum}-${fileNum}`;
+  if (fileNum) {
+    if (folderNum) {
+      // Файл в папке: task:XX-YY или solution-XX-YY
+      if (isProblem) {
+        return `task:${folderNum}-${fileNum}`;
+      } else if (isSolution) {
+        return `solution-${folderNum}-${fileNum}`;
+      }
+    } else {
+      // Файл без папки: task:XX или solution-XX (используем только номер файла)
+      if (isProblem) {
+        return `task:${fileNum}`;
+      } else if (isSolution) {
+        return `solution-${fileNum}`;
+      }
     }
   }
   
   // Fallback на старое имя, если не удалось извлечь номера
-  const dirPart = dirParts.join(':');
+  const dirPart = validDirParts.join(':');
   const prefix = dirPart ? `${dirPart}:` : '';
   return `play:@src:${prefix}${base}`;
 }
