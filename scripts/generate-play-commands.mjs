@@ -28,7 +28,31 @@ function toPosix(p) {
 function buildScriptName(relativeFile) {
   const relDir = path.dirname(relativeFile);
   const base = path.basename(relativeFile);
-  const dirPart = toPosix(relDir).split('/').filter(Boolean).join(':');
+  
+  // Извлекаем номер из первой папки (например, "13" из "13-передача-данных-с-context")
+  const dirParts = toPosix(relDir).split('/').filter(Boolean);
+  const firstDirMatch = dirParts[0]?.match(/^(\d{2,})-/);
+  const folderNum = firstDirMatch ? firstDirMatch[1] : null;
+  
+  // Извлекаем номер из имени файла (например, "06" из "06-глобальное-состояние.решение.jsx")
+  const fileNumMatch = base.match(/^(\d{2,})-/);
+  const fileNum = fileNumMatch ? fileNumMatch[1] : null;
+  
+  // Определяем, это проблема или решение
+  const isSolution = base.includes('.решение.');
+  const isProblem = base.includes('.проблема.');
+  
+  // Формируем имя скрипта
+  if (folderNum && fileNum) {
+    if (isProblem) {
+      return `task:${folderNum}-${fileNum}`;
+    } else if (isSolution) {
+      return `solution-${folderNum}-${fileNum}`;
+    }
+  }
+  
+  // Fallback на старое имя, если не удалось извлечь номера
+  const dirPart = dirParts.join(':');
   const prefix = dirPart ? `${dirPart}:` : '';
   return `play:@src:${prefix}${base}`;
 }
@@ -69,9 +93,11 @@ async function main() {
   const pkg = JSON.parse(pkgRaw);
   pkg.scripts = pkg.scripts || {};
 
-  // Remove old play:@src:* entries
+  // Remove old play:@src:* entries and old task:/solution- entries
   for (const key of Object.keys(pkg.scripts)) {
-    if (key.startsWith('play:@src:')) delete pkg.scripts[key];
+    if (key.startsWith('play:@src:') || key.startsWith('task:') || key.startsWith('solution-')) {
+      delete pkg.scripts[key];
+    }
   }
 
   // Ensure base scripts
