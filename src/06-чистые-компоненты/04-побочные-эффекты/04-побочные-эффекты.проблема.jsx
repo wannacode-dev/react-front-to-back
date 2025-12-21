@@ -1,3 +1,5 @@
+import React from 'react';
+ 
 import './style.css';
 
 // Глобальная переменная
@@ -59,8 +61,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

@@ -1,3 +1,5 @@
+import React from 'react';
+ 
 import './style.css';
 
 function OrderStatus({ status, trackingNumber, estimatedDate }) {
@@ -47,8 +49,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

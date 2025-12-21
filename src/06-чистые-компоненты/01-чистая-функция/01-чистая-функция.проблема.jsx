@@ -1,3 +1,5 @@
+import React from 'react';
+ 
 import './style.css';
 
 // ❌ ПЛОХО: Эта функция НЕ чистая - она изменяет внешнюю переменную
@@ -54,8 +56,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

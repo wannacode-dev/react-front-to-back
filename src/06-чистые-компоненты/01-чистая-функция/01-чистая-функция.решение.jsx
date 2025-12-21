@@ -1,3 +1,5 @@
+import React from 'react';
+ 
 import './style.css';
 
 function Cup({ guest }) {
@@ -22,6 +24,5 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 

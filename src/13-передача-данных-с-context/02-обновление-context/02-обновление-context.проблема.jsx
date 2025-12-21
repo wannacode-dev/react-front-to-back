@@ -1,6 +1,6 @@
+import React, { createContext, useContext, useState } from 'react';
+ 
 import './style.css';
-
-const { createContext, useContext, useState } = React;
 
 // Создайте ThemeContext с defaultValue { theme: 'light', toggleTheme: () => {} }
 const ThemeContext = createContext();
@@ -40,8 +40,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
+ 
 import './style.css';
-
-const { useState } = React;
 
 function ColorList() {
     const [colors, setColors] = useState(['Красный', 'Синий', 'Зеленый']);
@@ -38,8 +38,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

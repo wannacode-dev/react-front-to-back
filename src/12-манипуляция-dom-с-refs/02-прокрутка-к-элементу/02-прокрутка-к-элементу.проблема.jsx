@@ -1,6 +1,6 @@
+import React, { useRef } from 'react';
+ 
 import './style.css';
-
-const { useRef } = React;
 
 function ScrollExample() {
     // Создайте три ref для трех секций
@@ -38,8 +38,7 @@ function App() {
     return <ScrollExample />;
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

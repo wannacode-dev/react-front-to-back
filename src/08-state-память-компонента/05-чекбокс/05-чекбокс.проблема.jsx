@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
+ 
 import './style.css';
-
-const { useState } = React;
 
 function TermsAgreement() {
     // Создайте состояние isAgreed с начальным значением false
@@ -35,8 +35,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

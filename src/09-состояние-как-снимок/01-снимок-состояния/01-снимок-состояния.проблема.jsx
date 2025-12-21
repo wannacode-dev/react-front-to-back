@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
+ 
 import './style.css';
-
-const { useState } = React;
 
 function Counter() {
     const [count, setCount] = useState(0);
@@ -32,8 +32,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

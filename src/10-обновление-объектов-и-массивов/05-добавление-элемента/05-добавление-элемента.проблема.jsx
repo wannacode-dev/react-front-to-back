@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
+ 
 import './style.css';
-
-const { useState } = React;
 
 function FruitAdder() {
     const [fruits, setFruits] = useState(['Яблоко', 'Банан']);
@@ -53,8 +53,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

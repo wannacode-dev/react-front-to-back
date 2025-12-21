@@ -1,6 +1,6 @@
+import React, { useState, useRef } from 'react';
+ 
 import './style.css';
-
-const { useState, useRef } = React;
 
 function ClickCounter() {
     const [stateClicks, setStateClicks] = useState(0);
@@ -51,8 +51,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

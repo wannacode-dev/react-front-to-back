@@ -1,3 +1,5 @@
+import React from 'react';
+ 
 import './style.css';
 
 function Alert({ type, message }) {
@@ -45,8 +47,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

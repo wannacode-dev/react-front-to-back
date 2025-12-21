@@ -1,6 +1,6 @@
+import React, { useRef } from 'react';
+ 
 import './style.css';
-
-const { useRef } = React;
 
 function SearchForm() {
     // Создайте ref с помощью useRef(null)
@@ -32,8 +32,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

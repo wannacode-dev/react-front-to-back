@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
+ 
 import './style.css';
-
-const { useState } = React;
 
 function PersonEditor() {
     const [person, setPerson] = useState({
@@ -49,8 +49,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

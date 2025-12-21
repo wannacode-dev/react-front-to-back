@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from 'react';
+ 
 import './style.css';
-
-const { useState, useEffect } = React;
 
 function ClickerGame() {
     const [score, setScore] = useState(0);
@@ -79,8 +79,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

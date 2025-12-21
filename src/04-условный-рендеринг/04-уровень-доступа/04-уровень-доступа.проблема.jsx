@@ -1,3 +1,5 @@
+import React from 'react';
+ 
 import './style.css';
 
 function AccessLevel({ level }) {
@@ -43,8 +45,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

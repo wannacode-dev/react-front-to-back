@@ -1,6 +1,6 @@
+import React, { createContext, useContext, useState } from 'react';
+ 
 import './style.css';
-
-const { createContext, useContext, useState } = React;
 
 const AppContext = createContext();
 
@@ -97,8 +97,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

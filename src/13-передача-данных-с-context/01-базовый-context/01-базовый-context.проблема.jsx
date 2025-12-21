@@ -1,6 +1,6 @@
+import React, { createContext, useContext } from 'react';
+ 
 import './style.css';
-
-const { createContext, useContext } = React;
 
 // Создайте Context:
 // const ThemeContext = createContext('light');
@@ -48,8 +48,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 

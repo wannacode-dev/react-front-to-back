@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from 'react';
+ 
 import './style.css';
-
-const { useState, useEffect } = React;
 
 function MountLogger() {
     const [count, setCount] = useState(0);
@@ -31,8 +31,7 @@ function App() {
     );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default App;
 
 
 
